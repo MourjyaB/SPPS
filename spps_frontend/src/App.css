@@ -1,0 +1,226 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f4f4f4;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.form {
+  background: white;
+  padding: 30px;
+  border-radius: 10px;
+  width: 300px;
+  box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+}
+
+.form h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.form input,
+.form select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.form button {
+  width: 100%;
+  padding: 10px;
+  background: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.form button:hover {
+  background: #0056b3;
+}
+
+/* Error messages */
+.error {
+  color: #e63946;
+  font-size: 11px;
+  margin-top: -8px;
+  margin-bottom: 10px;
+}
+
+/* Bigger headline */
+.title {
+  text-align: center;
+  font-size: 22px;   /* increase size */
+  font-weight: bold;
+  margin-bottom: 25px;
+}
+
+/* Add spacing between buttons */
+.form button {
+  margin-bottom: 12px;   /* space between Register & Login */
+}
+
+/* Exam layout */
+.exam-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 30px;
+}
+
+.exam-main {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  width: 60%;
+  margin-right: 20px;
+}
+
+.exam-sidebar {
+  background: white;
+  padding: 15px;
+  border-radius: 10px;
+  display: grid;
+  grid-template-columns: repeat(5, 40px);
+  gap: 10px;
+}
+
+/* Question buttons */
+.q-btn {
+  padding: 8px;
+  cursor: pointer;
+  border: 1px solid #ccc;
+  background: #f0f0f0;
+}
+
+/* Options */
+.option {
+  display: block;
+  width: 100%;
+  margin: 10px 0;
+  padding: 10px;
+  border: 1px solid #ccc;
+  background: #fff;
+  cursor: pointer;
+}
+
+.option:hover {
+  background: #f0f0f0;
+}
+
+/* Selected option */
+.selected {
+  background: #007bff;
+  color: white;
+}
+
+/* Submit button */
+.submit-btn {
+  margin-top: 20px;
+  padding: 10px;
+  width: 100%;
+  background: green;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+/* Timer text */
+.exam-main h2 {
+  text-align: right;
+  color: red;
+}
+
+/* Question grid states */
+.q-btn {
+  padding: 8px;
+  border: 2px solid #ccc;
+  background: #f0f0f0;
+  cursor: pointer;
+}
+
+/* 🔹 Bigger Question Grid Buttons */
+.q-btn {
+  width: 45px;
+  height: 45px;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+/* Answered = green */
+.q-btn.answered {
+  background: green;
+  color: white;
+}
+
+/* Visited but not answered = red */
+.q-btn.visited {
+  background: red;
+  color: white;
+}
+
+/* Current question */
+.q-btn.current {
+  border: 2px solid black;
+}
+
+
+
+
+/* 🔹 Bigger Question Text */
+.exam-main h3 {
+  font-size: 26px;
+  margin-bottom: 10px;
+}
+
+.exam-main p {
+  font-size: 22px;
+  font-weight: 500;
+}
+
+/* 🔹 Bigger Options */
+.option {
+  font-size: 18px;
+  padding: 14px;
+}
+
+/* 🔹 Balanced Navigation Buttons */
+.nav-buttons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.nav-btn {
+  padding: 12px 24px;
+  font-size: 16px;
+  min-width: 130px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+/* 🔹 Equal visual weight */
+.prev-btn,
+.next-btn {
+  display: inline-block;
+  text-align: center;
+}
+
+/* 🔹 Clean spacing */
+.option + .option {
+  margin-top: 8px;
+}
+
+.exam-main {
+  line-height: 1.6;
+}
+
