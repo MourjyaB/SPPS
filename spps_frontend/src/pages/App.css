@@ -1,0 +1,850 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f4f4f4;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.form {
+  background: white;
+  padding: 30px;
+  border-radius: 10px;
+  width: 300px;
+  box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+}
+
+.form h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.form input,
+.form select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.form button {
+  width: 100%;
+  padding: 10px;
+  background: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.form button:hover {
+  background: #0056b3;
+}
+
+/* Error messages */
+.error {
+  color: #e63946;
+  font-size: 11px;
+  margin-top: -8px;
+  margin-bottom: 10px;
+}
+
+/* Bigger headline */
+.title {
+  text-align: center;
+  font-size: 22px;   /* increase size */
+  font-weight: bold;
+  margin-bottom: 25px;
+}
+
+/* Add spacing between buttons */
+.form button {
+  margin-bottom: 12px;   /* space between Register & Login */
+}
+
+/* Exam layout */
+.exam-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 30px;
+}
+
+.exam-main {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  width: 60%;
+  margin-right: 20px;
+}
+
+.exam-sidebar {
+  background: white;
+  padding: 15px;
+  border-radius: 10px;
+  display: grid;
+  grid-template-columns: repeat(5, 40px);
+  gap: 10px;
+}
+
+/* Question buttons */
+.q-btn {
+  padding: 8px;
+  cursor: pointer;
+  border: 1px solid #ccc;
+  background: #f0f0f0;
+}
+
+/* Options */
+.option {
+  display: block;
+  width: 100%;
+  margin: 10px 0;
+  padding: 10px;
+  border: 1px solid #ccc;
+  background: #fff;
+  cursor: pointer;
+}
+
+.option:hover {
+  background: #f0f0f0;
+}
+
+/* Selected option */
+.selected {
+  background: #007bff;
+  color: white;
+}
+
+/* Submit button */
+.submit-btn {
+  margin-top: 20px;
+  padding: 10px;
+  width: 100%;
+  background: green;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+/* Timer text */
+.exam-main h2 {
+  text-align: right;
+  color: red;
+}
+
+/* Question grid states */
+.q-btn {
+  padding: 8px;
+  border: 2px solid #ccc;
+  background: #f0f0f0;
+  cursor: pointer;
+}
+
+/* 🔹 Bigger Question Grid Buttons */
+.q-btn {
+  width: 45px;
+  height: 45px;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+/* Answered = green */
+.q-btn.answered {
+  background: green;
+  color: white;
+}
+
+/* Visited but not answered = red */
+.q-btn.visited {
+  background: red;
+  color: white;
+}
+
+/* Current question */
+.q-btn.current {
+  border: 2px solid black;
+}
+
+
+
+
+/* 🔹 Bigger Question Text */
+.exam-main h3 {
+  font-size: 26px;
+  margin-bottom: 10px;
+}
+
+.exam-main p {
+  font-size: 22px;
+  font-weight: 500;
+}
+
+/* 🔹 Bigger Options */
+.option {
+  font-size: 18px;
+  padding: 14px;
+}
+
+/* 🔹 Balanced Navigation Buttons */
+.nav-buttons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.nav-btn {
+  padding: 12px 24px;
+  font-size: 16px;
+  min-width: 130px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+/* 🔹 Equal visual weight */
+.prev-btn,
+.next-btn {
+  display: inline-block;
+  text-align: center;
+}
+
+/* 🔹 Clean spacing */
+.option + .option {
+  margin-top: 8px;
+}
+
+.exam-main {
+  line-height: 1.6;
+}
+
+/* ======================================
+            LANDING PAGE
+====================================== */
+
+.landing-page{
+
+    position:relative;
+
+    min-height:100vh;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    overflow:hidden;
+
+    background:
+        radial-gradient(circle at 12% 15%, rgba(255,255,255,.70), transparent 28%),
+        radial-gradient(circle at 90% 18%, rgba(225,255,232,.65), transparent 32%),
+        radial-gradient(circle at 20% 85%, rgba(255,255,255,.55), transparent 30%),
+        radial-gradient(circle at 85% 80%, rgba(180,235,190,.45), transparent 35%),
+        radial-gradient(circle at 55% 50%, rgba(255,255,255,.18), transparent 45%),
+        linear-gradient(
+            135deg,
+            #f8fdf9 0%,
+            #edf8f0 15%,
+            #d8efdf 35%,
+            #b8dfc3 60%,
+            #84bc98 85%,
+            #4b8f67 100%
+        );
+
+    background-size:180% 180%;
+
+    animation:gradientMove 14s ease infinite;
+
+}
+
+@keyframes gradientMove{
+
+    0%{
+
+        background-position:0% 50%;
+
+    }
+
+    50%{
+
+        background-position:100% 50%;
+
+    }
+
+    100%{
+
+        background-position:0% 50%;
+
+    }
+
+}
+
+.landing-content{
+
+    position:relative;
+
+    z-index:10;
+
+    width:90%;
+
+    max-width:1100px;
+
+    text-align:center;
+
+}
+
+.landing-content h1{
+
+    color:#0f5132;
+
+    font-size:72px;
+
+    font-weight:800;
+
+    line-height:1.1;
+
+    margin-bottom:22px;
+
+    letter-spacing:-2px;
+
+}
+
+.landing-content h2{
+
+    color:#2d6241;
+
+    font-size:30px;
+
+    font-weight:500;
+
+    margin-bottom:18px;
+
+}
+
+.tagline{
+
+    color:#4d7058;
+
+    font-size:22px;
+
+    letter-spacing:3px;
+
+    margin-bottom:60px;
+
+    font-weight:500;
+
+}
+
+.home-buttons{
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:25px;
+
+    margin-bottom:80px;
+
+}
+
+.login-btn{
+
+    width:210px;
+
+    padding:18px;
+
+    border:none;
+
+    border-radius:14px;
+
+    background:#14532d;
+
+    color:white;
+
+    font-size:18px;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+    box-shadow:0 10px 25px rgba(20,83,45,.25);
+
+}
+
+.login-btn:hover{
+
+    transform:translateY(-4px);
+
+    background:#0f4123;
+
+}
+
+.register-btn{
+
+    width:210px;
+
+    padding:18px;
+
+    border:2px solid #14532d;
+
+    border-radius:14px;
+
+    background:white;
+
+    color:#14532d;
+
+    font-size:18px;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+.register-btn:hover{
+
+    background:#14532d;
+
+    color:white;
+
+    transform:translateY(-4px);
+
+}
+
+.feature-row{
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:30px;
+
+    padding-top:45px;
+
+    border-top:1px solid rgba(20,83,45,.15);
+
+}
+
+.feature-item{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:12px;
+
+    color:#14532d;
+
+    font-size:18px;
+
+    font-weight:600;
+
+}
+
+.feature-item svg{
+
+    font-size:28px;
+
+    color:#14532d;
+
+}
+
+/* Floating Background Blobs */
+
+.blob{
+
+    position:absolute;
+
+    border-radius:50%;
+
+    filter:blur(140px);
+
+    opacity:.18;
+
+    animation:floatBlob 10s ease-in-out infinite alternate;
+
+}
+
+.blob1{
+
+    width:420px;
+
+    height:420px;
+
+    background:white;
+
+    top:-150px;
+
+    left:-120px;
+
+}
+
+.blob2{
+
+    width:480px;
+
+    height:480px;
+
+    background:#d8ffe2;
+
+    bottom:-180px;
+
+    right:-150px;
+
+}
+
+.blob3{
+
+    width:300px;
+
+    height:300px;
+
+    background:white;
+
+    top:35%;
+
+    right:22%;
+
+}
+
+@keyframes floatBlob{
+
+    from{
+
+        transform:translateY(0px);
+
+    }
+
+    to{
+
+        transform:translateY(35px);
+
+    }
+
+}
+
+@media(max-width:900px){
+
+    .landing-content h1{
+
+        font-size:50px;
+
+    }
+
+    .landing-content h2{
+
+        font-size:22px;
+
+    }
+
+    .feature-row{
+
+        grid-template-columns:repeat(2,1fr);
+
+    }
+
+}
+
+@media(max-width:600px){
+
+    .landing-content h1{
+
+        font-size:38px;
+
+    }
+
+    .landing-content h2{
+
+        font-size:18px;
+
+    }
+
+    .tagline{
+
+        font-size:18px;
+
+    }
+
+    .home-buttons{
+
+        flex-direction:column;
+
+        align-items:center;
+
+    }
+
+    .feature-row{
+
+        grid-template-columns:1fr;
+
+        gap:20px;
+
+    }
+
+}
+
+/*=========================
+        LOGIN PAGE
+=========================*/
+
+.auth-page{
+
+    min-height:100vh;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    position:relative;
+
+    overflow:hidden;
+
+    background:
+        radial-gradient(circle at 12% 15%, rgba(255,255,255,.70), transparent 28%),
+        radial-gradient(circle at 90% 18%, rgba(225,255,232,.65), transparent 32%),
+        radial-gradient(circle at 20% 85%, rgba(255,255,255,.55), transparent 30%),
+        radial-gradient(circle at 85% 80%, rgba(180,235,190,.45), transparent 35%),
+        linear-gradient(
+            135deg,
+            #f8fdf9 0%,
+            #edf8f0 15%,
+            #d8efdf 35%,
+            #b8dfc3 60%,
+            #84bc98 85%,
+            #4b8f67 100%
+        );
+
+    background-size:180% 180%;
+
+    animation:gradientMove 14s ease infinite;
+
+}
+
+.auth-card{
+
+    width:420px;
+
+    padding:45px;
+
+    background:rgba(255,255,255,.78);
+
+    backdrop-filter:blur(18px);
+
+    border-radius:22px;
+
+    box-shadow:0 20px 50px rgba(0,0,0,.12);
+
+    border:1px solid rgba(255,255,255,.55);
+
+    z-index:10;
+
+}
+
+.auth-card h1{
+
+    color:#14532d;
+
+    text-align:center;
+
+    margin-bottom:10px;
+
+    font-size:34px;
+
+}
+
+.auth-card p{
+
+    color:#666;
+
+    text-align:center;
+
+    margin-bottom:35px;
+
+}
+
+.auth-card input{
+
+    width:100%;
+
+    padding:16px;
+
+    margin-bottom:18px;
+
+    border:1px solid #d8e8dc;
+
+    border-radius:12px;
+
+    background:white;
+
+    box-sizing:border-box;
+
+    font-size:16px;
+
+    transition:.3s;
+
+}
+
+.auth-card input:focus{
+
+    outline:none;
+
+    border-color:#14532d;
+
+    box-shadow:0 0 0 4px rgba(20,83,45,.12);
+
+}
+
+.auth-btn{
+
+    width:100%;
+
+    padding:16px;
+
+    margin-top:8px;
+
+    border:none;
+
+    border-radius:12px;
+
+    background:#14532d;
+
+    color:white;
+
+    font-size:17px;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+.auth-btn:hover{
+
+    background:#0f4123;
+
+    transform:translateY(-2px);
+
+}
+
+.auth-footer{
+
+    margin-top:25px;
+
+    text-align:center;
+
+    color:#666;
+
+    font-size:15px;
+
+}
+
+.auth-footer span{
+
+    margin-left:6px;
+
+    color:#14532d;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+}
+
+.auth-footer span:hover{
+
+    text-decoration:underline;
+
+}
+
+/* ==========================
+      REGISTER PAGE
+========================== */
+
+.register-card{
+
+    width:460px;
+
+    max-height:90vh;
+
+    overflow-y:auto;
+
+}
+
+/* Username field */
+
+.register-card input:disabled{
+
+    background:#eef6f0;
+
+    color:#14532d;
+
+    font-weight:600;
+
+    cursor:not-allowed;
+
+}
+
+/* Role Dropdown */
+
+.register-card select{
+
+    width:100%;
+
+    padding:16px;
+
+    margin-bottom:18px;
+
+    border:1px solid #d8e8dc;
+
+    border-radius:12px;
+
+    background:white;
+
+    font-size:16px;
+
+    outline:none;
+
+    box-sizing:border-box;
+
+    transition:.3s;
+
+}
+
+.register-card select:focus{
+
+    border-color:#14532d;
+
+    box-shadow:0 0 0 4px rgba(20,83,45,.12);
+
+}
+
+/* Error Messages */
+
+.error{
+
+    color:#dc2626;
+
+    font-size:13px;
+
+    margin:-12px 0 12px 4px;
+
+    text-align:left;
+
+}

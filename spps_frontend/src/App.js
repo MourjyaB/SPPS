@@ -1,22 +1,28 @@
 import React from "react";
 import { Routes, Route } from "react-router-dom";
-import Home from "./home";
-import Register from "./register";
-import Login from "./login";
-import Test from "./test";
-import Exam from "./exam";
-import TeacherDashboard from "./teacherDashboard";
-import ProtectedTeacherRoute from "./ProtectedTeacherRoute";
-import ProtectedStudentRoute from "./ProtectedStudentRoute";
-import TeacherHome from "./teacherHome";
-import StudentHome from "./studentHome";
-import UploadQuestions from "./uploadQuestions";
-import QuestionBank from "./questionBank";
-import Analytics from "./analytics";
-import TeacherProfile from "./teacherProfile";
-import StudentDashboard from "./studentDashboard";
-import Results from "./results";
-import Performance from "./performance";
+import Home from "./pages/home";
+import Register from "./pages/register";
+import Login from "./pages/login";
+import Test from "./pages/test";
+import Exam from "./pages/exam";
+import TeacherDashboard from "./pages/teacherDashboard";
+import TeacherHome from "./pages/teacherHome";
+import StudentHome from "./pages/studentHome";
+import UploadQuestions from "./pages/uploadQuestions";
+import TeacherProfile from "./pages/teacherProfile";
+import StudentProfile from "./pages/studentProfile";
+import StudentDashboard from "./pages/studentDashboard";
+import Results from "./pages/results";
+import Performance from "./pages/performance";
+import FindStudent from "./pages/findStudent";
+import StudentReport from "./pages/studentReport";
+import AdminHome from "./pages/adminHome";
+import AdminDashboard from "./pages/adminDashboard";
+import QuestionManagement from "./pages/questionManagement";
+import UserManagement from "./pages/userManagement";
+import TeacherStatistics from "./pages/teacherStats";
+import AdminProfile from "./pages/adminProfile";
+import ProtectedRoute from "./components/protectedRoute";
 
 function App() {
   return (
@@ -24,18 +30,35 @@ function App() {
       <Route path="/" element={<Home />} />
       <Route path="/register" element={<Register />} />
       <Route path="/login" element={<Login />} />
+
+      <Route element={<ProtectedRoute allowedRoles={["student"]} />}>
       <Route path="/test" element={<Test />} />
       <Route path="/exam" element={<Exam />} />
-      <Route path="/student-home" element={<ProtectedStudentRoute> <StudentHome /> </ProtectedStudentRoute>}/>
-      <Route path="/teacher-home" element={<ProtectedTeacherRoute> <TeacherHome /> </ProtectedTeacherRoute>}/>
-      <Route path="/teacher-dashboard" element={<ProtectedTeacherRoute> <TeacherDashboard /> </ProtectedTeacherRoute>}/>
-      <Route path="/upload-questions" element={<ProtectedTeacherRoute> <UploadQuestions /> </ProtectedTeacherRoute>}/>
-      <Route path="/question-bank" element={<ProtectedTeacherRoute> <QuestionBank /> </ProtectedTeacherRoute>}/>
-      <Route path="/analytics" element={<ProtectedTeacherRoute> <Analytics /> </ProtectedTeacherRoute>}/>
-      <Route path="/teacher-profile" element={<ProtectedTeacherRoute> <TeacherProfile /> </ProtectedTeacherRoute>}/>
-      <Route path="/student-dashboard" element={<ProtectedStudentRoute> <StudentDashboard /> </ProtectedStudentRoute>}/>
-      <Route path="/results" element={<ProtectedStudentRoute> <Results /> </ProtectedStudentRoute>}/>
-      <Route path="/performance" element={<ProtectedStudentRoute> <Performance /> </ProtectedStudentRoute>}/>
+      <Route path="/student-home" element={<StudentHome />}/>
+      <Route path="/student-profile" element={<StudentProfile />}/>
+      <Route path="/student-dashboard" element={<StudentDashboard />}/>
+      <Route path="/results" element={<Results />}/>
+      <Route path="/performance" element={<Performance />}/>
+      </Route>
+
+      <Route element={<ProtectedRoute allowedRoles={["teacher"]} />}>
+      <Route path="/teacher-home" element={<TeacherHome />}/>
+      <Route path="/teacher-dashboard" element={<TeacherDashboard />}/>
+      <Route path="/upload-questions" element={<UploadQuestions />}/>
+      <Route path="/teacher-profile" element={<TeacherProfile />}/>
+      <Route path="/find-student" element={<FindStudent />}/>
+      <Route path="/student-report" element={<StudentReport />}/>
+      </Route>
+      
+      <Route element={<ProtectedRoute allowedRoles={["admin"]} />}>
+      <Route path="/admin-profile" element={<AdminProfile/>}/>
+      <Route path="/admin-home" element={<AdminHome />}/>
+      <Route path="/admin-dashboard" element={<AdminDashboard />}/>
+      <Route path="/question-management" element={<QuestionManagement />}/>
+      <Route path="/user-management" element={<UserManagement/>}/>
+      <Route path="/teacher-stats" element={<TeacherStatistics/>}/>
+      </Route>
+
     </Routes>
   );
 }
