@@ -60,7 +60,7 @@ function Register() {
   if (Object.keys(newErrors).length > 0) return;
 
   try {
-    const response = await fetch("http://127.0.0.1:8000/auth/register", {
+    const response = await fetch(`${API_URL}/auth/register`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
