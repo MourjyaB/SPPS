@@ -46,7 +46,8 @@ function Login() {
 // token expiry time (1 hour)
     const expiryTime = Date.now() + 60 * 60 * 1000; 
     localStorage.setItem("token_expiry", expiryTime);
-
+    localStorage.setItem("role", data.role);
+    
     localStorage.setItem("role", result.role);
 
 
