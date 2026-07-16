@@ -22,7 +22,9 @@ function Layout({ children }) {
 
   const [collapsed, setCollapsed] = useState(false);
 
-  const [role, setRole] = useState("");
+  const [role, setRole] = useState(
+  localStorage.getItem("role") || ""
+);
 
   useEffect(() => {
 
@@ -48,6 +50,7 @@ function Layout({ children }) {
         const data = await response.json();
 
         setRole(data.role);
+        localStorage.setItem("role", data.role);
 
       } catch (err) {
 
