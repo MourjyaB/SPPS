@@ -159,7 +159,7 @@ function UploadQuestions() {
             <h2>Upload PDF</h2>
           <br/>
           <a
-      href="/Format.pdf"
+      href={`${process.env.PUBLIC_URL}/Format%20(1).pdf`}
       download="Format.pdf"
       style={{
         display: "inline-block",
